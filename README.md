@@ -8,4 +8,4 @@ Algorithms Used:
 2. Robust Clustering Algorithm for Categorical Attributes
 3. K-Medoid Clustering Algorithm
 
-Achieved an overall precision of 73% in predicting criminal activities in my home city(Pune), with respect to a particular timeframe of the day, day of a week and identifying a vulnerable locality in the city.
+Achieved an overall precision of 72% in predicting criminal activities in my home city(Pune), with respect to a particular timeframe of the day, day of a week and identifying a vulnerable locality in the city.
