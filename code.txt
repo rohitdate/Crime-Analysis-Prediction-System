@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int n;
+		Scanner in=new Scanner(System.in);
+		n=in.nextInt();
+		int a[][]=new int[5][5];
+		for(int i=0;i<n;i++)
+		{
+		    for(int j=0;j<n;j++)
+		    {
+		        a[i][j]=n;
+		    }
+		}
+		int b=0,m=n,k=n;
+			for(int i=b;i<n*2;i++)
+		{
+		    for(int j=0;j<k*2;j++)
+		    {
+		       System.out.print(m);
+		    }
+		    b++;
+		    k--;
+		    m--;
+		    System.out.println();
+		}
+	}
+}
