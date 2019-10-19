@@ -46,9 +46,9 @@ public class KDEKmeans extends Applet implements ActionListener,MouseListener, M
 	int count1,count2,count3,count4,count5;
 	boolean isButtonPressed = false;
 	int mx,my,thresholdval;
-	double changeval=0.01;	//change in probability density
+	double changeval = 0.01;	//change in probability density
 	int noclust = 0;
-	double h=0.0167;
+	double h = 0.0167;
 	
 	TextField textbox_kvalue, textbox_xcord, textbox_ycord, textbox_kde;
 	Button button_kmeans, button_kde, button_chicago, button_pune,button_sqcount;
@@ -112,8 +112,8 @@ public class KDEKmeans extends Applet implements ActionListener,MouseListener, M
 		addMouseListener( this );
 		addMouseMotionListener( this );
 
-		mx=getWidth()/2;
-		my=getHeight()/2;
+		mx = getWidth()/2;
+		my = getHeight()/2;
 
 		// K MEANS ALGORITHM
 		button_kmeans = new Button("Run");
@@ -154,7 +154,7 @@ public class KDEKmeans extends Applet implements ActionListener,MouseListener, M
 	}
 	public void mousePressed( MouseEvent e ) {  // called after a button is pressed down
 		isButtonPressed = true;
-		if(flagb3==true)
+		if(flagb3 == true)
 		{
 			textbox_xcord.setText(String.valueOf(41.674936+(mx*(42.01002-41.674936)/950)));
 			textbox_ycord.setText(String.valueOf(-87.940857+(my*(-87.525036-(-87.940857))/650)));
@@ -306,12 +306,12 @@ public class KDEKmeans extends Applet implements ActionListener,MouseListener, M
 		if (flagb3 == true)
 		{
 			fileName = "chicagof.csv";
-			thresholdval=100;
+			thresholdval = 100;
 		}
 		else
 		{
 			fileName = "finish.csv";
-			thresholdval=50;
+			thresholdval = 50;
 		}
 
 		File file = new File(fileName);
@@ -554,8 +554,7 @@ public class KDEKmeans extends Applet implements ActionListener,MouseListener, M
 						z = n2[m][n];
 						double d1 = n1[count4].xtstar - n1[z].xtstar;
 						double d2 = n1[count4].ytstar - n1[z].ytstar;
-						double temp1 = (Math.sqrt(Math.pow(d1, 2)
-								+ Math.pow(d2, 2)));
+						double temp1 = (Math.sqrt(Math.pow(d1, 2) + Math.pow(d2, 2)));
 						double temp2 = n1[count4].st + n1[z].st;
 						 //If st+st'<(distance between xtstar and xtstar') then break
 						if (temp1 > temp2)
@@ -593,9 +592,10 @@ public class KDEKmeans extends Applet implements ActionListener,MouseListener, M
 	// FUNCTION TO FIND THE DISTANCE
 	private double distance(double lat1, double lon1, double lat2, double lon2) {
 		double theta = lon1 - lon2;
-		double dist = Math.sin(deg2rad(lat1)) * Math.sin(deg2rad(lat2))
-				+ Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2))
-				* Math.cos(deg2rad(theta));
+		double dist = Math.sin(deg2rad(lat1)) 
+					  * Math.sin(deg2rad(lat2))
+					  + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2))
+					  * Math.cos(deg2rad(theta));
 		dist = Math.acos(dist);
 		dist = dist * 6378.38;
 		return (dist);
@@ -612,7 +612,7 @@ public class KDEKmeans extends Applet implements ActionListener,MouseListener, M
 	private double kdeprobdens(double x, double y)
 	{
 		double[] u = new double[Global.totalPoints];
-		double sum1 = 0, prob_density=0;
+		double sum1 = 0, prob_density = 0;
 		
 		try{
 			for (int count1 = 0; count1 < noData; count1++) {

@@ -11,6 +11,4 @@ public class Goodness implements Comparable<Goodness>
 		else if (this.goodnessWithClusterIdJ < negh.goodnessWithClusterIdJ) s = -1;
 		return s;
 	}
-
 }
-
