@@ -7,7 +7,7 @@ public class MaxHeap<T> {
 		data = new Vector<T>();
 	}
 
-	//constructs a new priority queue acoording to GoodnessMeasure from an unordered vector
+	//constructs a new priority queue according to GoodnessMeasure from an unordered vector
 	public void calculatepriority(Vector<T> v) 
 	{
 		data = new Vector<T>();
@@ -108,7 +108,7 @@ public class MaxHeap<T> {
 					child += 1;
 				}
 
-				//If the value of child is bigger than value of Parent it keeps mooving down
+				//If the value of child is bigger than value of Parent it keeps moving down
 				if (((Comparable<T>)value).compareTo(data.get(child)) < 0) 
 				{
 					data.set(root, data.get(child));

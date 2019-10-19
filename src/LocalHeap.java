@@ -1,5 +1,4 @@
 
-
 import java.util.Vector;
 public class LocalHeap 
 {
@@ -12,6 +11,7 @@ public class LocalHeap
 	{
 		tHeap.add(node);
 	}
+	
 	//To get the node with Maximum Goodness
 	public Goodness getMaxGoodness() 
 	{
@@ -23,7 +23,7 @@ public class LocalHeap
 	public int removeNodewithClusId(int Clusterid) 
 	{
 		MaxHeap<Goodness> tempHeap = new MaxHeap<Goodness>();
-		int flag=0;
+		int flag = 0;
 		int size = this.tHeap.size();
 		for (int i = 0; i < size; i++)
 		{
@@ -34,11 +34,11 @@ public class LocalHeap
 			}
 			else
 			{
-				flag=1; 
+				flag = 1; 
 			}    
 		}
 		tHeap = tempHeap;
-		if(flag==0)
+		if(flag == 0)
 			return 0;
 		else
 			return 1;
